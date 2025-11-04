@@ -139,21 +139,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Contact Form
-const contactForm = document.querySelector('.contact-form');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(contactForm);
-    const name = contactForm.querySelector('input[type="text"]').value;
-    const email = contactForm.querySelector('input[type="email"]').value;
-    
-    if (name && email) {
-        alert('Thank you for your message! We will get back to you soon.');
-        contactForm.reset();
-    }
-});
+// Contact Form handled by Formspree
 
 // Navbar Scroll Effect
 window.addEventListener('scroll', () => {
